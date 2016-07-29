@@ -5,6 +5,7 @@
 //  Created by PARK JAICHANG on 7/22/16.
 //  Copyright © 2016 JAICHANGPARK. All rights reserved.
 //
+//  4x4 metrix in c and intrinsic 
 
 #include <stdio.h>
 #include <stdlib.h>
