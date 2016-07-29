@@ -89,7 +89,9 @@ void Matrix4x4Intrinsic(float* MatrixA, float* MatrixB, float* MatrixDest){
     __m128 xmmR;
     for (i = 0; i < 4; i++) {
       
-        xmmR = _mm_add_ps(_mm_mul_ps(_mm_set1_ps(MatrixA[i]), xmmB[i]),_mm_add_ps(_mm_mul_ps(_mm_set1_ps(MatrixA[i]), xmmB[i]),_mm_add_ps(_mm_mul_ps(_mm_set1_ps(MatrixA[i]),xmmB[i]),_mm_mul_ps(_mm_set1_ps(MatrixA[i]), xmmB[i]))));
+       
+        xmmR = _mm_add_ps(_mm_mul_ps(_mm_set1_ps(MatrixA[i]), xmmB[i]),_mm_add_ps(_mm_mul_ps(_mm_set1_ps(MatrixA[i]), xmmB[i]),
+        _mm_add_ps(_mm_mul_ps(_mm_set1_ps(MatrixA[i]),xmmB[i]),_mm_mul_ps(_mm_set1_ps(MatrixA[i]), xmmB[i]))));
         
         _mm_store_ps((MatrixDest+(i*4)), xmmR);
     }
